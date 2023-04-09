@@ -1,0 +1,5 @@
+python datapipeline.py \
+    --runner DataflowRunner \
+    --project trafficsystems3 \
+    --temp_location gs://tempstorages3/temp/ \
+    --region northamerica-northeast2
