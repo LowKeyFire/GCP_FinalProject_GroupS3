@@ -99,7 +99,7 @@ with beam.Pipeline(options=options) as p:
     gcs_temp_location = 'gs://tempstorages3/temp'
 
     congestion_data | 'Write to BigQuery' >> WriteToBigQuery(
-        table='trafficsystems3.flaggedtraffic',
+        table='trafficsystems3:flaggedtraffic.trafficdata',
         schema=congestion_schema,
         custom_gcs_temp_location=gcs_temp_location,
         write_disposition=beam.io.BigQueryDisposition.WRITE_TRUNCATE,
